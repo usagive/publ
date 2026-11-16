@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publix Savers - $750 Gift Card Reward Program</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        publixGreen: '#55823b',
+                        publixDark: '#3d5e2a',
+                        publixLight: '#f8fafc',
+                        publixAccent: '#70a750'
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cta-btn-gradient {
+            background: linear-gradient(180deg, #ff3b3b 0%, #d31d1d 100%);
+            box-shadow: 0 10px 25px -5px rgba(211, 29, 29, 0.4);
+        }
+        .cta-btn-gradient:hover {
+            background: linear-gradient(180deg, #ff4d4d 0%, #b81515 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-[#fcfcfd] text-slate-800 font-sans antialiased selection:bg-publixGreen selection:text-white">
+
+    <!-- Top Announcement Banner -->
+    <div class="bg-publixDark text-white text-xs py-2.5 px-4 text-center font-semibold tracking-wide flex items-center justify-center gap-2 overflow-hidden shadow-inner">
+        <span class="inline-flex items-center gap-1.5 bg-red-500 text-white px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider animate-pulse">
+            <i class="fa-solid fa-fire"></i> Live Status
+        </span>
+        <span id="claimCounterText">⚠️ Limited Spots Remaining: <strong class="text-yellow-300">14/100</strong> Gift Cards Claimed Today</span>
+    </div>
+
+    <!-- Main Centered Container (Matching High-Converting Style) -->
+    <main class="max-w-xl mx-auto px-4 py-8 sm:py-12 space-y-8">
+        
+        <!-- Logo Box -->
+        <div class="flex justify-center">
+            <div class="bg-white px-6 py-4 rounded-2xl card-shadow border border-slate-200 inline-flex flex-col items-center">
+                <div class="flex items-center gap-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-publixGreen">
+                    <span>PUBLIX</span>
+                    <div class="w-7 h-7 bg-publixGreen text-white rounded-full flex items-center justify-center text-xs shadow">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </div>
+                    <span>SAVERS</span>
+                </div>
+                <div class="text-[11px] tracking-[0.25em] uppercase font-bold text-slate-500 mt-0.5 flex items-center gap-1">
+                    <span>—</span> GIFT CARD <span>—</span>
+                </div>
+                <div class="flex gap-1 mt-2">
+                    <div class="h-1 w-12 bg-publixGreen rounded-full"></div>
+                    <div class="h-1 w-8 bg-publixAccent rounded-full"></div>
+                    <div class="h-1 w-4 bg-emerald-300 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Headline -->
+        <div class="text-center space-y-2">
+            <p class="text-slate-500 font-semibold text-sm sm:text-base">Complete the Steps below to claim your</p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+                $750 Publix Gift Card
+            </h1>
+        </div>
+
+        <!-- Steps Box -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 card-shadow border border-slate-200 space-y-6">
+            <h2 class="text-xl font-extrabold text-slate-900">Steps to Qualify</h2>
+            
+            <div class="space-y-4 text-sm sm:text-base font-semibold text-slate-700">
+                <div class="flex items-start gap-3.5">
+                    <span class="text-publixGreen font-extrabold text-lg">1.</span>
+                    <p class="pt-0.5">Click on <span class="text-slate-900 font-bold">"START NOW"</span></p>
+                </div>
+                <div class="flex items-start gap-3.5">
+                    <span class="text-publixGreen font-extrabold text-lg">2.</span>
+                    <p class="pt-0.5">Enter your email and basic information</p>
+                </div>
+                <div class="flex items-start gap-3.5">
+                    <span class="text-publixGreen font-extrabold text-lg">3.</span>
+                    <p class="pt-0.5">Complete recommended deals (<span class="text-publixGreen">required</span>)</p>
+                </div>
+                <div class="flex items-start gap-3.5">
+                    <span class="text-publixGreen font-extrabold text-lg">4.</span>
+                    <p class="pt-0.5">Claim your $750 Publix Gift Card</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Big Start Now CTA Button -->
+        <div class="pt-2">
+            <button onclick="startClaimProcess()" class="w-full relative group overflow-hidden bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white text-xl sm:text-2xl font-black py-5 px-8 rounded-2xl shadow-[0_15px_30px_-5px_rgba(225,29,72,0.5)] hover:shadow-[0_20px_40px_-5px_rgba(225,29,72,0.7)] transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 uppercase tracking-widest flex items-center justify-center gap-4 border border-red-400/30">
+                <span class="absolute inset-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                <span class="relative z-10 flex items-center gap-3">
+                    <span>START NOW</span>
+                    <i class="fa-solid fa-arrow-right text-lg animate-bounce-x"></i>
+                </span>
+            </button>
+        </div>
+
+        <!-- Floating Live Voucher Toast Notification (Pop-up style) -->
+        <div id="liveToast" class="fixed bottom-6 left-6 z-40 max-w-xs bg-white/95 backdrop-blur-md border border-emerald-500/30 rounded-2xl p-4 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.15)] flex items-center gap-3.5 transition-all duration-500 transform translate-y-32 opacity-0 pointer-events-none">
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-publixGreen to-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md">
+                <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="text-xs text-slate-700 pr-2">
+                <p class="font-extrabold text-slate-900" id="toastName">Michael T. from FL</p>
+                <p class="text-slate-600 font-medium" id="toastText">just claimed a $750 Publix Gift Card</p>
+                <p class="text-[10px] text-emerald-600 font-bold mt-0.5 flex items-center gap-1">
+                    <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> <span id="toastTime">Just now • Verified Claim</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ Section (Matching the Reference Style) -->
+        <div class="pt-8 space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center tracking-tight">
+                FREQUENTLY ASKED QUESTIONS
+            </h2>
+
+            <div class="space-y-6 text-sm text-slate-600">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow space-y-2">
+                    <h3 class="font-bold text-slate-900 text-base">What are Deals?</h3>
+                    <p class="leading-relaxed">
+                        Deals are simple tasks you complete to earn rewards. This could be downloading an app, completing a survey, or signing up for a trial subscription using the links provided. Each deal has specific steps—once you reach the required level or complete the task, you'll earn a reward.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow space-y-2">
+                    <h3 class="font-bold text-slate-900 text-base">How many Deals do I need to complete?</h3>
+                    <p class="leading-relaxed">
+                        To qualify for the $750 Publix Gift Card reward, you must complete the required number of sponsor deals listed in your campaign dashboard. Please ensure real participation as bot entries do not qualify.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow space-y-2">
+                    <h3 class="font-bold text-slate-900 text-base">When will I receive my reward?</h3>
+                    <p class="leading-relaxed">
+                        Once all required deals are verified by our partner network, your reward status will update and delivery instructions for your gift card will be sent to your registered email address.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Disclaimers -->
+        <footer class="pt-8 pb-12 border-t border-slate-200 text-center text-xs text-slate-500 space-y-4">
+            <p class="leading-relaxed">
+                <strong>Important Campaign Terms:</strong> Traffic has to be real. Bot traffic, entries you complete yourself, and entries from friends won't pay. This bridge page clearly states what you need to do to qualify. Prizes are not guaranteed. Creatives represent the offer accurately without false claims or misleading angles.
+            </p>
+            <div class="flex justify-center gap-4 font-semibold text-slate-600">
+                <a href="#" class="hover:text-publixGreen">Privacy Policy</a>
+                <a href="#" class="hover:text-publixGreen">Terms of Service</a>
+                <a href="#" class="hover:text-publixGreen">Support</a>
+            </div>
+            <div>&copy; 2026 Publix Savers Reward Program. All Rights Reserved.</div>
+        </footer>
+
+    </main>
+
+    <!-- Interactive Claim Modal -->
+    <div id="claimModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 card-shadow relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modalStep1" class="space-y-5">
+                <div class="text-center space-y-2">
+                    <div class="w-12 h-12 bg-publixGreen/10 text-publixGreen rounded-2xl flex items-center justify-center mx-auto text-xl font-bold">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900">Enter Your Details</h3>
+                    <p class="text-xs text-slate-600">Provide your email to start the qualification process.</p>
+                </div>
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Email Address</label>
+                        <input type="email" id="userEmail" placeholder="yourname@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-publixGreen">
+                    </div>
+                    <button onclick="goToDeals()" class="w-full cta-btn-gradient text-white font-extrabold py-3.5 rounded-xl text-base uppercase tracking-wide">
+                        Continue to Deals <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Dynamic live testimonials toast rotation
+        const testimonials = [
+            { name: "Michael T. from FL", text: "just claimed a $750 Publix Gift Card", time: "Just now • Verified Claim" },
+            { name: "Sarah M. from GA", text: "completed requirements & got reward", time: "1 min ago • Verified Claim" },
+            { name: "David R. from NC", text: "verified deals and claimed reward", time: "3 mins ago • Verified Claim" },
+            { name: "Jessica W. from TN", text: "just claimed a $750 Publix Gift Card", time: "5 mins ago • Verified Claim" }
+        ];
+
+        let currentIndex = 0;
+        
+        function showLiveToast() {
+            const t = testimonials[currentIndex];
+            const toast = document.getElementById('liveToast');
+            
+            document.getElementById('toastName').innerText = t.name;
+            document.getElementById('toastText').innerText = t.text;
+            document.getElementById('toastTime').innerText = t.time;
+
+            // Slide up and fade in
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            // Hide after 4 seconds
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+
+            currentIndex = (currentIndex + 1) % testimonials.length;
+        }
+
+        // Trigger toast every 8 seconds
+        setInterval(showLiveToast, 8000);
+        setTimeout(showLiveToast, 2500); // Initial pop-up after 2.5s
+
+        function startClaimProcess() {
+            const modal = document.getElementById('claimModal');
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('claimModal');
+            modal.classList.add('hidden');
+        }
+
+        function goToDeals() {
+            const email = document.getElementById('userEmail').value.trim();
+            if (!email) {
+                alertBox('Please enter a valid email address.');
+                return;
+            }
+            closeModal();
+            alertBox('Redirecting to secure deal verification...');
+        }
+
+        function alertBox(msg) {
+            const banner = document.createElement('div');
+            banner.className = 'fixed bottom-5 right-5 z-50 bg-publixGreen text-white px-4 py-3 rounded-xl shadow-2xl text-xs font-semibold flex items-center gap-2';
+            banner.innerHTML = `<i class="fa-solid fa-circle-info"></i> <span>${msg}</span>`;
+            document.body.appendChild(banner);
+            setTimeout(() => banner.remove(), 3500);
+        }
+    </script>
+</body>
+</html>
